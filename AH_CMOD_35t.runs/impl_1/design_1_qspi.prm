@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SPIX4
+Size               16M
+Start Address      0x00000000
+End Address        0x00FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x0021728B    Mar 13 10:52:00 2026    /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/impl_1/design_1_wrapper.bit

@@ -1,0 +1,644 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Mar 13 10:45:21 2026
+# Process ID         : 15561
+# Current directory  : /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1
+# Command line       : vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file           : /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/design_1_wrapper.vds
+# Journal file       : /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/vivado.jou
+# Running On         : Yousef-Machine
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 155H
+# CPU Frequency      : 2000.716 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 22
+# Host memory        : 33080 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41670 MB
+# Available Virtual  : 31460 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.1/Vivado/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.srcs/sources_1/bd/design_1/design_1.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ design_1_xlconstant_0_0
+design_1_xlconstant_1_0
+design_1_xlconcat_0_0
+INFO: [Project 1-4468] Skipped adding '../../../../Soft/app_AH_35t/build/app_AH_35t.elf' file in synth run script
+Command: read_checkpoint -auto_incremental -incremental /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.srcs/utils_1/imports/synth_1/EM_REC_Delay_Duty.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.srcs/utils_1/imports/synth_1/EM_REC_Delay_Duty.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top design_1_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
+INFO: [Synth 8-7075] Helper process launched with PID 15708
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2245.703 ; gain = 204.953 ; free physical = 12643 ; free virtual = 28532
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:47]
+INFO: [Synth 8-3491] module 'design_1' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:4993' bound to instance 'design_1_i' of component 'design_1' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:5029]
+INFO: [Synth 8-3491] module 'design_1_Btn_led_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_Btn_led_0_0_stub.vhdl:6' bound to instance 'Btn_led_0' of component 'design_1_Btn_led_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6301]
+INFO: [Synth 8-638] synthesizing module 'design_1_Btn_led_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_Btn_led_0_0_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'design_1_ClkTest_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_ClkTest_0_0_stub.vhdl:6' bound to instance 'ClkTest_0' of component 'design_1_ClkTest_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6308]
+INFO: [Synth 8-638] synthesizing module 'design_1_ClkTest_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_ClkTest_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'design_1_EM_REC_Delay_Duty_Mo_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_EM_REC_Delay_Duty_Mo_0_0_stub.vhdl:6' bound to instance 'EM_REC_Delay_Duty_Mo_0' of component 'design_1_EM_REC_Delay_Duty_Mo_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6314]
+INFO: [Synth 8-638] synthesizing module 'design_1_EM_REC_Delay_Duty_Mo_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_EM_REC_Delay_Duty_Mo_0_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'design_1_EM_REC_Delay_Duty_Mo_1_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_EM_REC_Delay_Duty_Mo_1_0_stub.vhdl:6' bound to instance 'EM_REC_Delay_Duty_Mo_1' of component 'design_1_EM_REC_Delay_Duty_Mo_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6325]
+INFO: [Synth 8-638] synthesizing module 'design_1_EM_REC_Delay_Duty_Mo_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_EM_REC_Delay_Duty_Mo_1_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'design_1_EM_REC_Delay_Duty_Mo_2_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_EM_REC_Delay_Duty_Mo_2_0_stub.vhdl:6' bound to instance 'EM_REC_Delay_Duty_Mo_2' of component 'design_1_EM_REC_Delay_Duty_Mo_2_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6336]
+INFO: [Synth 8-638] synthesizing module 'design_1_EM_REC_Delay_Duty_Mo_2_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_EM_REC_Delay_Duty_Mo_2_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'design_1_SPI_slave_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_SPI_slave_0_0_stub.vhdl:6' bound to instance 'SPI_slave_0' of component 'design_1_SPI_slave_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6347]
+INFO: [Synth 8-638] synthesizing module 'design_1_SPI_slave_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_SPI_slave_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:6' bound to instance 'axi_bram_ctrl_0' of component 'design_1_axi_bram_ctrl_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6363]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:65]
+WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:5424]
+INFO: [Synth 8-3491] module 'design_1_axi_dma_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_dma_0_0_stub.vhdl:6' bound to instance 'axi_dma_0' of component 'design_1_axi_dma_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6413]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_dma_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_dma_0_0_stub.vhdl:61]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_0_0_stub.vhdl:6' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6458]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_0_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_1_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_1_0_stub.vhdl:6' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6482]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_1_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_10_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_10_0_stub.vhdl:6' bound to instance 'axi_gpio_10' of component 'design_1_axi_gpio_10_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6506]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_10_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_10_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_2_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_2_0_stub.vhdl:6' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_2_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6530]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_2_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_2_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_3_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_3_0_stub.vhdl:6' bound to instance 'axi_gpio_3' of component 'design_1_axi_gpio_3_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6554]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_3_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_3_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_4_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_4_0_stub.vhdl:6' bound to instance 'axi_gpio_4' of component 'design_1_axi_gpio_4_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6578]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_4_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_4_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_5_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_5_0_stub.vhdl:6' bound to instance 'axi_gpio_5' of component 'design_1_axi_gpio_5_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6603]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_5_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_5_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_6_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_6_0_stub.vhdl:6' bound to instance 'axi_gpio_6' of component 'design_1_axi_gpio_6_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6628]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_6_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_6_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_7_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_7_0_stub.vhdl:6' bound to instance 'axi_gpio_7' of component 'design_1_axi_gpio_7_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6653]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_7_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_7_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_8_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_8_0_stub.vhdl:6' bound to instance 'axi_gpio_8' of component 'design_1_axi_gpio_8_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6677]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_8_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_8_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_9_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_9_0_stub.vhdl:6' bound to instance 'axi_gpio_9' of component 'design_1_axi_gpio_9_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6701]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_9_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_9_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_irq_spi_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_irq_spi_0_stub.vhdl:6' bound to instance 'axi_gpio_irq_spi' of component 'design_1_axi_gpio_irq_spi_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6724]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_irq_spi_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_gpio_irq_spi_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_1_axi_smc_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_smc_0_stub.vhdl:6' bound to instance 'axi_smc' of component 'design_1_axi_smc_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6748]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_smc_0_stub.vhdl:90]
+INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_uartlite_0_0_stub.vhdl:6' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6823]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axi_uartlite_0_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'design_1_axis_subset_converter_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axis_subset_converter_0_0_stub.vhdl:6' bound to instance 'axis_subset_converter_0' of component 'design_1_axis_subset_converter_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6848]
+INFO: [Synth 8-638] synthesizing module 'design_1_axis_subset_converter_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_axis_subset_converter_0_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'design_1_blk_mem_gen_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_blk_mem_gen_0_0_stub.vhdl:6' bound to instance 'blk_mem_gen_0' of component 'design_1_blk_mem_gen_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6861]
+INFO: [Synth 8-638] synthesizing module 'design_1_blk_mem_gen_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_blk_mem_gen_0_0_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6882]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_clk_wiz_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_mdm_1_0_stub.vhdl:6' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6889]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_mdm_1_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_0_stub.vhdl:6' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6902]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_axi_intc_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_intc_0_stub.vhdl:6' bound to instance 'microblaze_0_axi_intc' of component 'design_1_microblaze_0_axi_intc_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:6988]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_intc_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_intc_0_stub.vhdl:43]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:3049]
+INFO: [Synth 8-638] synthesizing module 'i00_couplers_imp_MLJI85' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'i00_couplers_imp_MLJI85' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'i01_couplers_imp_1GR4JJ8' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:173]
+INFO: [Synth 8-256] done synthesizing module 'i01_couplers_imp_1GR4JJ8' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:173]
+INFO: [Synth 8-638] synthesizing module 'i02_couplers_imp_NHJKHY' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:284]
+INFO: [Synth 8-256] done synthesizing module 'i02_couplers_imp_NHJKHY' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:284]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_8RVYHO' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:391]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_8RVYHO' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:391]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1UTB3Y5' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:492]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:492]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_7ANRHB' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:593]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_7ANRHB' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:593]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1W07O72' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:694]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1W07O72' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:694]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_5LX7BU' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:795]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_5LX7BU' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:795]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_1XR4ZAZ' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:896]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_1XR4ZAZ' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:896]
+INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_4YOIXL' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:997]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_4YOIXL' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:997]
+INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_1YO2N20' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1098]
+INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_1YO2N20' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1098]
+INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_2FYR80' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1199]
+INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_2FYR80' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1199]
+INFO: [Synth 8-638] synthesizing module 'm09_couplers_imp_1S9IENL' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1298]
+INFO: [Synth 8-256] done synthesizing module 'm09_couplers_imp_1S9IENL' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1298]
+INFO: [Synth 8-638] synthesizing module 'm10_couplers_imp_1JMMVIC' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1400]
+INFO: [Synth 8-256] done synthesizing module 'm10_couplers_imp_1JMMVIC' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1400]
+INFO: [Synth 8-638] synthesizing module 'm11_couplers_imp_AVFHLX' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1507]
+INFO: [Synth 8-256] done synthesizing module 'm11_couplers_imp_AVFHLX' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1507]
+INFO: [Synth 8-638] synthesizing module 'm12_couplers_imp_1L2AF0N' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1608]
+INFO: [Synth 8-256] done synthesizing module 'm12_couplers_imp_1L2AF0N' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1608]
+INFO: [Synth 8-638] synthesizing module 'm13_couplers_imp_9PFI3Q' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1709]
+INFO: [Synth 8-256] done synthesizing module 'm13_couplers_imp_9PFI3Q' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1709]
+INFO: [Synth 8-638] synthesizing module 'm14_couplers_imp_1IC4S8Y' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1810]
+INFO: [Synth 8-256] done synthesizing module 'm14_couplers_imp_1IC4S8Y' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1810]
+INFO: [Synth 8-638] synthesizing module 'm15_couplers_imp_CCS34Z' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1911]
+INFO: [Synth 8-256] done synthesizing module 'm15_couplers_imp_CCS34Z' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:1911]
+INFO: [Synth 8-638] synthesizing module 'm16_couplers_imp_1IXUA2P' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2012]
+INFO: [Synth 8-256] done synthesizing module 'm16_couplers_imp_1IXUA2P' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2012]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1RZP34U' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2633]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1RZP34U' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2633]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0_stub.vhdl:6' bound to instance 'tier2_xbar_0' of component 'design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:4536]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0_stub.vhdl:58]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0_stub.vhdl:6' bound to instance 'tier2_xbar_1' of component 'design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:4698]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0_stub.vhdl:58]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0_stub.vhdl:6' bound to instance 'tier2_xbar_2' of component 'design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:4847]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0_stub.vhdl:58]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_axi_periph_imp_xbar_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_periph_imp_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'design_1_microblaze_0_axi_periph_imp_xbar_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:4907]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_imp_xbar_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_microblaze_0_axi_periph_imp_xbar_0_stub.vhdl:58]
+INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:3049]
+INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2096]
+INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:6' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2268]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_dlmb_v10_0_stub.vhdl:6' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2322]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_dlmb_v10_0_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:6' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2350]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_ilmb_v10_0_stub.vhdl:6' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2404]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_ilmb_v10_0_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_lmb_bram_0_stub.vhdl:6' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2432]
+INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_lmb_bram_0_stub.vhdl:34]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:2096]
+INFO: [Synth 8-3491] module 'design_1_receive_signal_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_receive_signal_0_0_stub.vhdl:6' bound to instance 'receive_signal_0' of component 'design_1_receive_signal_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:7391]
+INFO: [Synth 8-638] synthesizing module 'design_1_receive_signal_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_receive_signal_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'design_1_rst_Clk_100M_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_rst_Clk_100M_0_stub.vhdl:6' bound to instance 'rst_Clk_100M' of component 'design_1_rst_Clk_100M_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:7399]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_Clk_100M_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_rst_Clk_100M_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'design_1_xadc_wiz_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_xadc_wiz_0_0_stub.vhdl:6' bound to instance 'xadc_wiz_0' of component 'design_1_xadc_wiz_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:7412]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/.Xil/Vivado-15561-Yousef-Machine/realtime/design_1_xadc_wiz_0_0_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:7453]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_7_xlconcat' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_7_xlconcat' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:7463]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:53]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_1_0' declared at '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:53' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:7467]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_1_0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_1_0' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:53]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/synth/design_1.vhd:5029]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:47]
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In104[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In105[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2355.641 ; gain = 314.891 ; free physical = 12525 ; free virtual = 28417
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2361.578 ; gain = 320.828 ; free physical = 12525 ; free virtual = 28417
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2361.578 ; gain = 320.828 ; free physical = 12525 ; free virtual = 28417
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2361.578 ; gain = 0.000 ; free physical = 12525 ; free virtual = 28417
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0_2/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_0_2/design_1_microblaze_0_0/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0_2/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0_2/design_1_dlmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0_2/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0_2/design_1_ilmb_v10_0/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0_2/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0_2/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0_2/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0_2/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0_2/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0_2/design_1_lmb_bram_0/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_xbar_0/design_1_microblaze_0_axi_periph_imp_xbar_0/design_1_microblaze_0_axi_periph_imp_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_xbar_0/design_1_microblaze_0_axi_periph_imp_xbar_0/design_1_microblaze_0_axi_periph_imp_xbar_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/tier2_xbar_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/tier2_xbar_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/tier2_xbar_1'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/tier2_xbar_1'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/tier2_xbar_2'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_periph/tier2_xbar_2'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0_2/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_intc'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_intc_0_2/design_1_microblaze_0_axi_intc_0/design_1_microblaze_0_axi_intc_0_in_context.xdc] for cell 'design_1_i/microblaze_0_axi_intc'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0_2/design_1_mdm_1_0/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0_2/design_1_mdm_1_0/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_rst_Clk_100M_0_1/design_1_rst_Clk_100M_0/design_1_rst_Clk_100M_0_in_context.xdc] for cell 'design_1_i/rst_Clk_100M'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_rst_Clk_100M_0_1/design_1_rst_Clk_100M_0/design_1_rst_Clk_100M_0_in_context.xdc] for cell 'design_1_i/rst_Clk_100M'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_SPI_slave_0_0/design_1_SPI_slave_0_0/design_1_SPI_slave_0_0_in_context.xdc] for cell 'design_1_i/SPI_slave_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_SPI_slave_0_0/design_1_SPI_slave_0_0/design_1_SPI_slave_0_0_in_context.xdc] for cell 'design_1_i/SPI_slave_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_in_context.xdc] for cell 'design_1_i/axi_gpio_2'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0_in_context.xdc] for cell 'design_1_i/axi_gpio_2'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_irq_spi_0/design_1_axi_gpio_irq_spi_0/design_1_axi_gpio_irq_spi_0_in_context.xdc] for cell 'design_1_i/axi_gpio_irq_spi'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_irq_spi_0/design_1_axi_gpio_irq_spi_0/design_1_axi_gpio_irq_spi_0_in_context.xdc] for cell 'design_1_i/axi_gpio_irq_spi'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_ClkTest_0_0/design_1_ClkTest_0_0/design_1_ClkTest_0_0_in_context.xdc] for cell 'design_1_i/ClkTest_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_ClkTest_0_0/design_1_ClkTest_0_0/design_1_ClkTest_0_0_in_context.xdc] for cell 'design_1_i/ClkTest_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_receive_signal_0_0/design_1_receive_signal_0_0/design_1_receive_signal_0_0_in_context.xdc] for cell 'design_1_i/receive_signal_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_receive_signal_0_0/design_1_receive_signal_0_0/design_1_receive_signal_0_0_in_context.xdc] for cell 'design_1_i/receive_signal_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_3'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_3_0/design_1_axi_gpio_3_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_3'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_0/design_1_axi_gpio_4_0/design_1_axi_gpio_4_0_in_context.xdc] for cell 'design_1_i/axi_gpio_4'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_4_0/design_1_axi_gpio_4_0/design_1_axi_gpio_4_0_in_context.xdc] for cell 'design_1_i/axi_gpio_4'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_in_context.xdc] for cell 'design_1_i/xadc_wiz_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_in_context.xdc] for cell 'design_1_i/xadc_wiz_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_in_context.xdc] for cell 'design_1_i/blk_mem_gen_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0_in_context.xdc] for cell 'design_1_i/blk_mem_gen_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0_in_context.xdc] for cell 'design_1_i/axis_subset_converter_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0_in_context.xdc] for cell 'design_1_i/axis_subset_converter_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0/design_1_axi_smc_0_in_context.xdc] for cell 'design_1_i/axi_smc'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_5_0/design_1_axi_gpio_5_0/design_1_axi_gpio_4_0_in_context.xdc] for cell 'design_1_i/axi_gpio_5'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_5_0/design_1_axi_gpio_5_0/design_1_axi_gpio_4_0_in_context.xdc] for cell 'design_1_i/axi_gpio_5'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_6_0/design_1_axi_gpio_6_0/design_1_axi_gpio_4_0_in_context.xdc] for cell 'design_1_i/axi_gpio_6'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_6_0/design_1_axi_gpio_6_0/design_1_axi_gpio_4_0_in_context.xdc] for cell 'design_1_i/axi_gpio_6'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_Btn_led_0_0/design_1_Btn_led_0_0/design_1_Btn_led_0_0_in_context.xdc] for cell 'design_1_i/Btn_led_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_Btn_led_0_0/design_1_Btn_led_0_0/design_1_Btn_led_0_0_in_context.xdc] for cell 'design_1_i/Btn_led_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_7_0/design_1_axi_gpio_7_0/design_1_axi_gpio_7_0_in_context.xdc] for cell 'design_1_i/axi_gpio_7'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_7_0/design_1_axi_gpio_7_0/design_1_axi_gpio_7_0_in_context.xdc] for cell 'design_1_i/axi_gpio_7'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_EM_REC_Delay_Duty_Mo_0_0/design_1_EM_REC_Delay_Duty_Mo_0_0/design_1_EM_REC_Delay_Duty_Mo_0_0_in_context.xdc] for cell 'design_1_i/EM_REC_Delay_Duty_Mo_0'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_EM_REC_Delay_Duty_Mo_0_0/design_1_EM_REC_Delay_Duty_Mo_0_0/design_1_EM_REC_Delay_Duty_Mo_0_0_in_context.xdc] for cell 'design_1_i/EM_REC_Delay_Duty_Mo_0'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_EM_REC_Delay_Duty_Mo_1_0/design_1_EM_REC_Delay_Duty_Mo_1_0/design_1_EM_REC_Delay_Duty_Mo_1_0_in_context.xdc] for cell 'design_1_i/EM_REC_Delay_Duty_Mo_1'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_EM_REC_Delay_Duty_Mo_1_0/design_1_EM_REC_Delay_Duty_Mo_1_0/design_1_EM_REC_Delay_Duty_Mo_1_0_in_context.xdc] for cell 'design_1_i/EM_REC_Delay_Duty_Mo_1'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_8'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_8_0/design_1_axi_gpio_8_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_8'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0_in_context.xdc] for cell 'design_1_i/axi_gpio_9'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0_in_context.xdc] for cell 'design_1_i/axi_gpio_9'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_10_0/design_1_axi_gpio_10_0/design_1_axi_gpio_irq_spi_0_in_context.xdc] for cell 'design_1_i/axi_gpio_10'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_10_0/design_1_axi_gpio_10_0/design_1_axi_gpio_irq_spi_0_in_context.xdc] for cell 'design_1_i/axi_gpio_10'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_EM_REC_Delay_Duty_Mo_2_0/design_1_EM_REC_Delay_Duty_Mo_2_0/design_1_EM_REC_Delay_Duty_Mo_2_0_in_context.xdc] for cell 'design_1_i/EM_REC_Delay_Duty_Mo_2'
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_EM_REC_Delay_Duty_Mo_2_0/design_1_EM_REC_Delay_Duty_Mo_2_0/design_1_EM_REC_Delay_Duty_Mo_2_0_in_context.xdc] for cell 'design_1_i/EM_REC_Delay_Duty_Mo_2'
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.srcs/constrs_1/new/CMODA7_constraints.xdc]
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.srcs/constrs_1/new/CMODA7_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.srcs/constrs_1/new/CMODA7_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.230 ; gain = 0.000 ; free physical = 12518 ; free virtual = 28425
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.266 ; gain = 0.000 ; free physical = 12517 ; free virtual = 28424
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2409.266 ; gain = 368.516 ; free physical = 12562 ; free virtual = 28470
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2417.234 ; gain = 376.484 ; free physical = 12561 ; free virtual = 28469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2417.234 ; gain = 376.484 ; free physical = 12561 ; free virtual = 28469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2417.234 ; gain = 376.484 ; free physical = 12553 ; free virtual = 28462
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2417.234 ; gain = 376.484 ; free physical = 12563 ; free virtual = 28478
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2493.234 ; gain = 452.484 ; free physical = 12511 ; free virtual = 28436
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2494.234 ; gain = 453.484 ; free physical = 12511 ; free virtual = 28435
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2506.250 ; gain = 465.500 ; free physical = 12489 ; free virtual = 28411
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2679.062 ; gain = 638.312 ; free physical = 12396 ; free virtual = 28318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2679.062 ; gain = 638.312 ; free physical = 12396 ; free virtual = 28318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2679.062 ; gain = 638.312 ; free physical = 12396 ; free virtual = 28318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2679.062 ; gain = 638.312 ; free physical = 12396 ; free virtual = 28318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2679.062 ; gain = 638.312 ; free physical = 12396 ; free virtual = 28318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2679.062 ; gain = 638.312 ; free physical = 12396 ; free virtual = 28318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------------------------------+----------+
+|      |BlackBox name                                       |Instances |
++------+----------------------------------------------------+----------+
+|1     |design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0 |         1|
+|2     |design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0 |         1|
+|3     |design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0 |         1|
+|4     |design_1_microblaze_0_axi_periph_imp_xbar_0         |         1|
+|5     |design_1_Btn_led_0_0                                |         1|
+|6     |design_1_ClkTest_0_0                                |         1|
+|7     |design_1_EM_REC_Delay_Duty_Mo_0_0                   |         1|
+|8     |design_1_EM_REC_Delay_Duty_Mo_1_0                   |         1|
+|9     |design_1_EM_REC_Delay_Duty_Mo_2_0                   |         1|
+|10    |design_1_SPI_slave_0_0                              |         1|
+|11    |design_1_axi_bram_ctrl_0_0                          |         1|
+|12    |design_1_axi_dma_0_0                                |         1|
+|13    |design_1_axi_gpio_0_0                               |         1|
+|14    |design_1_axi_gpio_1_0                               |         1|
+|15    |design_1_axi_gpio_10_0                              |         1|
+|16    |design_1_axi_gpio_2_0                               |         1|
+|17    |design_1_axi_gpio_3_0                               |         1|
+|18    |design_1_axi_gpio_4_0                               |         1|
+|19    |design_1_axi_gpio_5_0                               |         1|
+|20    |design_1_axi_gpio_6_0                               |         1|
+|21    |design_1_axi_gpio_7_0                               |         1|
+|22    |design_1_axi_gpio_8_0                               |         1|
+|23    |design_1_axi_gpio_9_0                               |         1|
+|24    |design_1_axi_gpio_irq_spi_0                         |         1|
+|25    |design_1_axi_smc_0                                  |         1|
+|26    |design_1_axi_uartlite_0_0                           |         1|
+|27    |design_1_axis_subset_converter_0_0                  |         1|
+|28    |design_1_blk_mem_gen_0_0                            |         1|
+|29    |design_1_clk_wiz_0_0                                |         1|
+|30    |design_1_mdm_1_0                                    |         1|
+|31    |design_1_microblaze_0_0                             |         1|
+|32    |design_1_microblaze_0_axi_intc_0                    |         1|
+|33    |design_1_receive_signal_0_0                         |         1|
+|34    |design_1_rst_Clk_100M_0                             |         1|
+|35    |design_1_xadc_wiz_0_0                               |         1|
+|36    |design_1_dlmb_bram_if_cntlr_0                       |         1|
+|37    |design_1_dlmb_v10_0                                 |         1|
+|38    |design_1_ilmb_bram_if_cntlr_0                       |         1|
+|39    |design_1_ilmb_v10_0                                 |         1|
+|40    |design_1_lmb_bram_0                                 |         1|
++------+----------------------------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------------------------------+------+
+|      |Cell                                                     |Count |
++------+---------------------------------------------------------+------+
+|1     |design_1_Btn_led_0_0_bbox                                |     1|
+|2     |design_1_ClkTest_0_0_bbox                                |     1|
+|3     |design_1_EM_REC_Delay_Duty_Mo_0_0_bbox                   |     1|
+|4     |design_1_EM_REC_Delay_Duty_Mo_1_0_bbox                   |     1|
+|5     |design_1_EM_REC_Delay_Duty_Mo_2_0_bbox                   |     1|
+|6     |design_1_SPI_slave_0_0_bbox                              |     1|
+|7     |design_1_axi_bram_ctrl_0_0_bbox                          |     1|
+|8     |design_1_axi_dma_0_0_bbox                                |     1|
+|9     |design_1_axi_gpio_0_0_bbox                               |     1|
+|10    |design_1_axi_gpio_10_0_bbox                              |     1|
+|11    |design_1_axi_gpio_1_0_bbox                               |     1|
+|12    |design_1_axi_gpio_2_0_bbox                               |     1|
+|13    |design_1_axi_gpio_3_0_bbox                               |     1|
+|14    |design_1_axi_gpio_4_0_bbox                               |     1|
+|15    |design_1_axi_gpio_5_0_bbox                               |     1|
+|16    |design_1_axi_gpio_6_0_bbox                               |     1|
+|17    |design_1_axi_gpio_7_0_bbox                               |     1|
+|18    |design_1_axi_gpio_8_0_bbox                               |     1|
+|19    |design_1_axi_gpio_9_0_bbox                               |     1|
+|20    |design_1_axi_gpio_irq_spi_0_bbox                         |     1|
+|21    |design_1_axi_smc_0_bbox                                  |     1|
+|22    |design_1_axi_uartlite_0_0_bbox                           |     1|
+|23    |design_1_axis_subset_converter_0_0_bbox                  |     1|
+|24    |design_1_blk_mem_gen_0_0_bbox                            |     1|
+|25    |design_1_clk_wiz_0_0_bbox                                |     1|
+|26    |design_1_dlmb_bram_if_cntlr_0_bbox                       |     1|
+|27    |design_1_dlmb_v10_0_bbox                                 |     1|
+|28    |design_1_ilmb_bram_if_cntlr_0_bbox                       |     1|
+|29    |design_1_ilmb_v10_0_bbox                                 |     1|
+|30    |design_1_lmb_bram_0_bbox                                 |     1|
+|31    |design_1_mdm_1_0_bbox                                    |     1|
+|32    |design_1_microblaze_0_0_bbox                             |     1|
+|33    |design_1_microblaze_0_axi_intc_0_bbox                    |     1|
+|34    |design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0_bbox |     1|
+|35    |design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0_bbox |     1|
+|36    |design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0_bbox |     1|
+|37    |design_1_microblaze_0_axi_periph_imp_xbar_0_bbox         |     1|
+|38    |design_1_receive_signal_0_0_bbox                         |     1|
+|39    |design_1_rst_Clk_100M_0_bbox                             |     1|
+|40    |design_1_xadc_wiz_0_0_bbox                               |     1|
+|41    |IBUF                                                     |    15|
+|42    |OBUF                                                     |    20|
++------+---------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2679.062 ; gain = 638.312 ; free physical = 12396 ; free virtual = 28318
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2679.062 ; gain = 590.625 ; free physical = 12396 ; free virtual = 28318
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2679.070 ; gain = 638.312 ; free physical = 12396 ; free virtual = 28318
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2679.070 ; gain = 0.000 ; free physical = 12566 ; free virtual = 28491
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2679.070 ; gain = 0.000 ; free physical = 12566 ; free virtual = 28491
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ab67b142
+INFO: [Common 17-83] Releasing license: Synthesis
+171 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 2679.098 ; gain = 1036.512 ; free physical = 12566 ; free virtual = 28491
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1855.785; main = 1855.785; forked = 273.360
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3381.168; main = 2679.066; forked = 963.930
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2703.074 ; gain = 0.000 ; free physical = 12565 ; free virtual = 28490
+INFO: [Common 17-1381] The checkpoint '/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 13 10:45:46 2026...

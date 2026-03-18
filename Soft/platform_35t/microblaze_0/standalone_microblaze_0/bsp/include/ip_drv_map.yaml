@@ -1,0 +1,54 @@
+axi_bram_ctrl_0:
+- axi_bram_ctrl
+- bram
+axi_dma_0:
+- axi_dma
+- axidma
+axi_gpio_0:
+- axi_gpio
+- gpio
+axi_gpio_1:
+- axi_gpio
+- gpio
+axi_gpio_10:
+- axi_gpio
+- gpio
+axi_gpio_2:
+- axi_gpio
+- gpio
+axi_gpio_3:
+- axi_gpio
+- gpio
+axi_gpio_4:
+- axi_gpio
+- gpio
+axi_gpio_5:
+- axi_gpio
+- gpio
+axi_gpio_6:
+- axi_gpio
+- gpio
+axi_gpio_7:
+- axi_gpio
+- gpio
+axi_gpio_8:
+- axi_gpio
+- gpio
+axi_gpio_9:
+- axi_gpio
+- gpio
+axi_gpio_irq_spi:
+- axi_gpio
+- gpio
+axi_uartlite_0:
+- axi_uartlite
+- uartlite
+microblaze_0_axi_intc:
+- axi_intc
+- intc
+microblaze_0_local_memory_dlmb_bram_if_cntlr:
+- lmb_bram_if_cntlr
+- bram
+xadc_wiz_0:
+- xadc_wiz
+- sysmon

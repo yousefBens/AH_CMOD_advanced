@@ -1,0 +1,17 @@
+# Vivado generated files
+*.jou
+*.log
+*.str
+*.zip
+
+AH_CMOD.cache/
+AH_CMOD.gen/
+AH_CMOD.hw/
+AH_CMOD.ip_user_files/
+AH_CMOD.runs/
+AH_CMOD.sim/
+
+# OS
+*~
+.DS_Store
+
