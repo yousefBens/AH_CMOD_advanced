@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../AH_CMOD_35t.srcs/sources_1/new/EM_REC_Delay_Duty_Mode.vhd" \
-"../../../../AH_CMOD_35t.srcs/sim_1/new/EM_REC_Delay_Duty_ModeTb.vhd" \
-
-# Do not sort compile order
-nosort

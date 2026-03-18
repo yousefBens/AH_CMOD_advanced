@@ -1,17 +1,19 @@
-# Vivado generated files
+# Vivado logs
 *.jou
 *.log
 *.str
 *.zip
 
-AH_CMOD.cache/
-AH_CMOD.gen/
-AH_CMOD.hw/
-AH_CMOD.ip_user_files/
-AH_CMOD.runs/
-AH_CMOD.sim/
+# Vivado generated folders (safe to ignore)
+*.cache/
+*.runs/
+*.sim/
+*.ip_user_files/
+*.hw/
+
+# ⚠️ NE PAS ignorer .gen complètement (important pour BD)
+# *.gen/   <-- ❌ à enlever
 
 # OS
 *~
 .DS_Store
-
