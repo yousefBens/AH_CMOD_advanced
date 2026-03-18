@@ -30,13 +30,14 @@
                  <0x40090000 &axi_gpio_8 0x40090000 0x10000>,
                  <0x400a0000 &axi_gpio_9 0x400a0000 0x10000>,
                  <0x400b0000 &axi_gpio_10 0x400b0000 0x10000>,
+                 <0x400c0000 &axi_gpio_11 0x400c0000 0x10000>,
                  <0x40600000 &axi_uartlite_0 0x40600000 0x10000>,
                  <0x41200000 &microblaze_0_axi_intc 0x41200000 0x10000>,
                  <0x41e00000 &axi_dma_0 0x41e00000 0x10000>,
                  <0x44a00000 &xadc_wiz_0 0x44a00000 0x10000>;
                 #ranges-address-cells = <0x1>;
                 #ranges-size-cells = <0x1>;
-                phandle = <0x17>;
+                phandle = <0x18>;
 
                 microblaze_0: cpu@0 {
                         xlnx,reset-msr-dce = <0x0>;
@@ -107,7 +108,7 @@
                         xlnx,dcache-use-writeback = <0x0>;
                         xlnx,div-zero-exception = <0x0>;
                         xlnx,mmu-tlb-access = <0x3>;
-                        bus-handle = <0x15>;
+                        bus-handle = <0x16>;
                         xlnx,cache-byte-size = <0x2000>;
                         xlnx,pvr-user2 = <0x0>;
                         xlnx,opcode-0x0-illegal = <0x0>;
@@ -158,7 +159,7 @@
                         xlnx,lockstep-slave = <0x0>;
                         xlnx,use-ext-nm-brk = <0x0>;
                         xlnx,instr-size = <0x20>;
-                        interrupt-handle = <0x12>;
+                        interrupt-handle = <0x13>;
                         xlnx,icache-always-used = <0x1>;
                         xlnx,i-lmb = <0x1>;
                         xlnx,mmu-dtlb-size = <0x4>;
@@ -183,14 +184,14 @@
                         xlnx,use-msr-instr = <0x0>;
                         xlnx,icache-data-width = <0x0>;
                         xlnx,debug-counter-width = <0x20>;
-                        phandle = <0x18>;
+                        phandle = <0x19>;
                 };
         };
 
         clock: clocks {
                 #address-cells = <0x1>;
                 #size-cells = <0x0>;
-                phandle = <0x19>;
+                phandle = <0x1a>;
 
                 clk_cpu_0: clk_cpu@0 {
                         compatible = "fixed-clock";
@@ -198,7 +199,7 @@
                         clock-frequency = <0x5f5e100>;
                         clock-output-names = "clk_cpu";
                         #clock-cells = <0x0>;
-                        phandle = <0x1a>;
+                        phandle = <0x1b>;
                 };
 
                 clk_bus_0: clk_bus_0@1 {
@@ -207,7 +208,7 @@
                         clock-frequency = <0x5f5e100>;
                         clock-output-names = "clk_bus_0";
                         #clock-cells = <0x0>;
-                        phandle = <0x16>;
+                        phandle = <0x17>;
                 };
         };
 
@@ -216,7 +217,7 @@
                 compatible = "simple-bus";
                 #address-cells = <0x1>;
                 #size-cells = <0x1>;
-                phandle = <0x15>;
+                phandle = <0x16>;
 
                 microblaze_0_axi_intc: interrupt-controller@41200000 {
                         #interrupt-cells = <0x2>;
@@ -257,7 +258,7 @@
                         interrupt-controller;
                         xlnx,async-intr = <0xffffffc0>;
                         xlnx,name = "microblaze_0_axi_intc";
-                        phandle = <0x12>;
+                        phandle = <0x13>;
                 };
 
                 axi_bram_ctrl_0: axi_bram_ctrl_0@c0000000 {
@@ -331,14 +332,14 @@
                         xlnx,include-mm2s = <0x0>;
                         xlnx,include-mm2s-dre = <0x0>;
                         xlnx,name = "axi_dma_0";
-                        phandle = <0x13>;
+                        phandle = <0x14>;
 
                         dma_channel_41e00030: dma-channel@41e00030 {
                                 xlnx,datawidth = <0x20>;
                                 xlnx,device-id = <0x0>;
                                 compatible = "xlnx,axi-dma-s2mm-channel";
                                 dma-channels = <0x1>;
-                                phandle = <0x1b>;
+                                phandle = <0x1c>;
                         };
                 };
 
@@ -432,6 +433,35 @@
                         xlnx,name = "axi_gpio_10";
                         xlnx,all-inputs = <0x1>;
                         phandle = <0x10>;
+                };
+
+                axi_gpio_11: gpio@400c0000 {
+                        xlnx,gpio-board-interface = "Custom";
+                        compatible = "xlnx,axi-gpio-2.0", "xlnx,xps-gpio-1.00.a";
+                        xlnx,all-outputs = <0x1>;
+                        #gpio-cells = <0x2>;
+                        xlnx,gpio-width = <0x2>;
+                        clock-frequency = <0x5f5e100>;
+                        xlnx,dout-default = <0x0>;
+                        xlnx,is-dual = <0x1>;
+                        xlnx,ip-name = "axi_gpio";
+                        xlnx,tri-default-2 = <0xffffffff>;
+                        reg = <0x400c0000 0x10000>;
+                        xlnx,all-inputs-2 = <0x0>;
+                        clocks = <&clk_bus_0>;
+                        xlnx,all-outputs-2 = <0x1>;
+                        gpio-controller;
+                        xlnx,interrupt-present = <0x0>;
+                        xlnx,gpio2-board-interface = "Custom";
+                        xlnx,edk-iptype = "PERIPHERAL";
+                        xlnx,dout-default-2 = <0x0>;
+                        status = "okay";
+                        xlnx,gpio2-width = <0x2>;
+                        clock-names = "s_axi_aclk";
+                        xlnx,tri-default = <0xffffffff>;
+                        xlnx,name = "axi_gpio_11";
+                        xlnx,all-inputs = <0x0>;
+                        phandle = <0x11>;
                 };
 
                 axi_gpio_2: gpio@40020000 {
@@ -599,7 +629,7 @@
                         compatible = "xlnx,axi-gpio-2.0", "xlnx,xps-gpio-1.00.a";
                         xlnx,all-outputs = <0x1>;
                         #gpio-cells = <0x2>;
-                        xlnx,gpio-width = <0x3>;
+                        xlnx,gpio-width = <0x1>;
                         clock-frequency = <0x5f5e100>;
                         xlnx,dout-default = <0x0>;
                         xlnx,is-dual = <0x1>;
@@ -736,7 +766,7 @@
                         xlnx,name = "axi_uartlite_0";
                         xlnx,data-bits = <0x8>;
                         xlnx,parity = "No_Parity";
-                        phandle = <0x11>;
+                        phandle = <0x12>;
                 };
 
                 microblaze_0_local_memory_dlmb_bram_if_cntlr: lmb_bram_if_cntlr@0 {
@@ -813,7 +843,7 @@
                         xlnx,bram-awidth = <0x20>;
                         xlnx,lmb-awidth = <0x20>;
                         xlnx,name = "microblaze_0_local_memory_ilmb_bram_if_cntlr";
-                        phandle = <0x1c>;
+                        phandle = <0x1d>;
                 };
 
                 xadc_wiz_0: xadc_wiz@44a00000 {
@@ -956,7 +986,7 @@
                         xlnx,alarm-limit-r1 = <0x57e4>;
                         xlnx,component-name = "design_1_xadc_wiz_0_0";
                         xlnx,external-muxaddr-enable = <0x0>;
-                        phandle = <0x14>;
+                        phandle = <0x15>;
                 };
         };
 
@@ -1000,6 +1030,7 @@
                 axi_gpio_0 = "/amba_pl/gpio@40000000";
                 axi_gpio_1 = "/amba_pl/gpio@40010000";
                 axi_gpio_10 = "/amba_pl/gpio@400b0000";
+                axi_gpio_11 = "/amba_pl/gpio@400c0000";
                 axi_gpio_2 = "/amba_pl/gpio@40020000";
                 axi_gpio_3 = "/amba_pl/gpio@40040000";
                 axi_gpio_4 = "/amba_pl/gpio@40050000";

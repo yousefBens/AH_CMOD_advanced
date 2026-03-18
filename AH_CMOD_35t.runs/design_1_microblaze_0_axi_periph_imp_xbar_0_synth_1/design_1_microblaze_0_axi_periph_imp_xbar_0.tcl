@@ -56,7 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "design_1_microblaze_0_axi_periph_imp_xbar_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 5
 set_param general.usePosixSpawnForFork 1
 set_param bd.open.in_stealth_mode 1
 set_msg_config  -id {17-179}  -suppress 

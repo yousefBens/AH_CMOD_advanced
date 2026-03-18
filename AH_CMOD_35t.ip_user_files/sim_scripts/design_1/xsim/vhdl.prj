@@ -46,6 +46,9 @@ vhdl xil_defaultlib  \
 "../../../bd/design_1/ip/design_1_axi_gpio_9_0/sim/design_1_axi_gpio_9_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_gpio_10_0/sim/design_1_axi_gpio_10_0.vhd" \
 "../../../bd/design_1/ip/design_1_EM_REC_Delay_Duty_Mo_2_0/sim/design_1_EM_REC_Delay_Duty_Mo_2_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_gpio_11_0/sim/design_1_axi_gpio_11_0.vhd" \
+"../../../bd/design_1/ip/design_1_SW_follow_input_Sign_0_0/sim/design_1_SW_follow_input_Sign_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_SW_follow_input_Sign_1_0/sim/design_1_SW_follow_input_Sign_1_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 # Do not sort compile order

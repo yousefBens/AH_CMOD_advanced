@@ -170,6 +170,10 @@ drv_info:
     driver: gpio
     ip_name: axi_gpio
     path: /tools/Xilinx/2025.1/Vitis/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_12
+  axi_gpio_11:
+    driver: gpio
+    ip_name: axi_gpio
+    path: /tools/Xilinx/2025.1/Vitis/data/embeddedsw/XilinxProcessorIPLib/drivers/gpio_v4_12
   axi_gpio_2:
     driver: gpio
     ip_name: axi_gpio

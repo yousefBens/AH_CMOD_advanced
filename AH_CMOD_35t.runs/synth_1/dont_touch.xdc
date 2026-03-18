@@ -129,6 +129,15 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_EM_REC_Delay_Duty_Mo_2_0/design_1_EM_REC_Delay_Duty_Mo_2_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_EM_REC_Delay_Duty_Mo_2_0 || ORIG_REF_NAME==design_1_EM_REC_Delay_Duty_Mo_2_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_axi_gpio_11_0/design_1_axi_gpio_11_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_11_0 || ORIG_REF_NAME==design_1_axi_gpio_11_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_SW_follow_input_Sign_0_0/design_1_SW_follow_input_Sign_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_SW_follow_input_Sign_0_0 || ORIG_REF_NAME==design_1_SW_follow_input_Sign_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_SW_follow_input_Sign_1_0/design_1_SW_follow_input_Sign_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_SW_follow_input_Sign_1_0 || ORIG_REF_NAME==design_1_SW_follow_input_Sign_1_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0 || ORIG_REF_NAME==design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0} -quiet] -quiet
 

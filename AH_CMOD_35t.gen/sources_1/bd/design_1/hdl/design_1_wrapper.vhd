@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Fri Mar 13 10:44:57 2026
+--Date        : Wed Mar 18 15:57:18 2026
 --Host        : Yousef-Machine running 64-bit Ubuntu 24.04.4 LTS
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -36,7 +36,9 @@ entity design_1_wrapper is
     spi_mosi : in STD_LOGIC;
     spi_sclk : in STD_LOGIC;
     spi_ss_n : in STD_LOGIC;
-    sw : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    sw1 : out STD_LOGIC;
+    sw2 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    sw3 : out STD_LOGIC;
     uart_rxd_out : out STD_LOGIC;
     uart_txd_in : in STD_LOGIC;
     vauxn4 : in STD_LOGIC;
@@ -70,10 +72,12 @@ architecture STRUCTURE of design_1_wrapper is
     Vcomp6 : in STD_LOGIC;
     btn : in STD_LOGIC;
     V1_V2_RX : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    sw : out STD_LOGIC_VECTOR ( 2 downto 0 );
     LNA : out STD_LOGIC_VECTOR ( 2 downto 0 );
     DSA_P : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    led2 : out STD_LOGIC
+    led2 : out STD_LOGIC;
+    sw1 : out STD_LOGIC;
+    sw3 : out STD_LOGIC;
+    sw2 : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1;
 begin
@@ -101,7 +105,9 @@ design_1_i: component design_1
       spi_mosi => spi_mosi,
       spi_sclk => spi_sclk,
       spi_ss_n => spi_ss_n,
-      sw(2 downto 0) => sw(2 downto 0),
+      sw1 => sw1,
+      sw2(0) => sw2(0),
+      sw3 => sw3,
       uart_rxd_out => uart_rxd_out,
       uart_txd_in => uart_txd_in,
       vauxn4 => vauxn4,

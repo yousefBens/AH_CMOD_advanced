@@ -442,6 +442,24 @@
             },
             "V17": {
                 "VT": "AC",
+                "BA": "0x400C0000",
+                "HA": "0x400CFFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/microblaze_0",
+                "MI": "M_AXI_DP",
+                "MS": "SEG_axi_gpio_11_Reg",
+                "MV": "xilinx.com:ip:microblaze:11.0",
+                "SX": "/axi_gpio_11",
+                "SI": "S_AXI",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:axi_gpio:2.0",
+                "TM": "data",
+                "TU": "register"
+            },
+            "V18": {
+                "VT": "AC",
                 "BA": "0x40600000",
                 "HA": "0x4060FFFF",
                 "BP": "C_BASEADDR",
@@ -458,7 +476,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V18": {
+            "V19": {
                 "VT": "AC",
                 "BA": "0x41200000",
                 "HA": "0x4120FFFF",
@@ -477,7 +495,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V19": {
+            "V20": {
                 "VT": "AC",
                 "BA": "0x41E00000",
                 "HA": "0x41E0FFFF",
@@ -495,7 +513,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V20": {
+            "V21": {
                 "VT": "AC",
                 "BA": "0x44A00000",
                 "HA": "0x44A0FFFF",
@@ -513,7 +531,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V21": {
+            "V22": {
                 "VT": "AC",
                 "BA": "0xC0000000",
                 "HA": "0xC0001FFF",
@@ -531,7 +549,7 @@
                 "TM": "both",
                 "TU": "memory"
             },
-            "V22": {
+            "V23": {
                 "VT": "AC",
                 "BA": "0xC0000000",
                 "HA": "0xC0001FFF",
@@ -656,6 +674,11 @@
             },
             {
                 "src": "V22",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V23",
                 "trg": "V2",
                 "EH": "2"
             }

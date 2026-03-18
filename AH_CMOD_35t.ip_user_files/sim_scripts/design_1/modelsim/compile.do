@@ -354,6 +354,9 @@ vcom -work xil_defaultlib -64 -93  \
 "../../../bd/design_1/ip/design_1_axi_gpio_9_0/sim/design_1_axi_gpio_9_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_gpio_10_0/sim/design_1_axi_gpio_10_0.vhd" \
 "../../../bd/design_1/ip/design_1_EM_REC_Delay_Duty_Mo_2_0/sim/design_1_EM_REC_Delay_Duty_Mo_2_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_gpio_11_0/sim/design_1_axi_gpio_11_0.vhd" \
+"../../../bd/design_1/ip/design_1_SW_follow_input_Sign_0_0/sim/design_1_SW_follow_input_Sign_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_SW_follow_input_Sign_1_0/sim/design_1_SW_follow_input_Sign_1_0.vhd" \
 "../../../bd/design_1/sim/design_1.vhd" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/a9be" "+incdir+../../../../AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+../../../../AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../AH_CMOD_35t.gen/sources_1/bd/design_1/ipshared/a8e4/hdl/verilog" "+incdir+../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" "+incdir+/tools/Xilinx/2025.1/Vivado/data/xilinx_vip/include" \

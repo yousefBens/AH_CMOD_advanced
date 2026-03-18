@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
 set_param general.usePosixSpawnForFork 1
 set_param bd.open.in_stealth_mode 1
 set_msg_config  -id {17-179}  -suppress 
@@ -159,6 +160,8 @@ set_property used_in_implementation false [get_files -all /home/yousef/Vivado_wo
 set_property used_in_implementation false [get_files -all /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_9_0/design_1_axi_gpio_9_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_10_0/design_1_axi_gpio_10_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_10_0/design_1_axi_gpio_10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_11_0/design_1_axi_gpio_11_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_11_0/design_1_axi_gpio_11_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0/design_1_microblaze_0_axi_periph_imp_tier2_xbar_2_0_ooc.xdc]

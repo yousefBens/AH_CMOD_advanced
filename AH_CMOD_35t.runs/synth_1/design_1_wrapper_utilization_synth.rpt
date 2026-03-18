@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Fri Mar 13 10:45:46 2026
+| Date         : Wed Mar 18 16:05:20 2026
 | Host         : Yousef-Machine running 64-bit Ubuntu 24.04.4 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -193,10 +193,13 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | design_1_axi_gpio_3_0                               |    1 |
 | design_1_axi_gpio_2_0                               |    1 |
 | design_1_axi_gpio_1_0                               |    1 |
+| design_1_axi_gpio_11_0                              |    1 |
 | design_1_axi_gpio_10_0                              |    1 |
 | design_1_axi_gpio_0_0                               |    1 |
 | design_1_axi_dma_0_0                                |    1 |
 | design_1_axi_bram_ctrl_0_0                          |    1 |
+| design_1_SW_follow_input_Sign_1_0                   |    1 |
+| design_1_SW_follow_input_Sign_0_0                   |    1 |
 | design_1_SPI_slave_0_0                              |    1 |
 | design_1_EM_REC_Delay_Duty_Mo_2_0                   |    1 |
 | design_1_EM_REC_Delay_Duty_Mo_1_0                   |    1 |

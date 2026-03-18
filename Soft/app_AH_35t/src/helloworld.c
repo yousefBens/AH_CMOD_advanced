@@ -21,35 +21,38 @@
 #define UART_IRQ_ID        XPAR_FABRIC_XUARTLITE_0_INTR
 
 /* AXI_GPIO_0 / AXI_GPIO_1 */
-#define GPIO0_BASEADDR     XPAR_XGPIO_0_BASEADDR
-#define GPIO1_BASEADDR     XPAR_XGPIO_1_BASEADDR
+#define GPIO0_BASEADDR XPAR_XGPIO_0_BASEADDR
+#define GPIO1_BASEADDR XPAR_XGPIO_1_BASEADDR
 
-/* NEW: AXI_GPIO_10 (interrupt)  -> canonical XGPIO_2 */
+/* AXI_GPIO_10 (presence interrupt) */
 #define GPIO_PRES_BASEADDR XPAR_XGPIO_2_BASEADDR
 #define GPIO_PRES_IRQ_ID   XPAR_FABRIC_XGPIO_2_INTR
 
-/* AXI_GPIO_2 / AXI_GPIO_3 (canonical XGPIO_3 / XGPIO_4) */
-#define GPIO2_BASEADDR     XPAR_XGPIO_3_BASEADDR
-#define GPIO3_BASEADDR     XPAR_XGPIO_4_BASEADDR
+/* NEW AXI_GPIO_11 (newly added GPIO, no interrupt) */
+#define GPIO10_BASEADDR  XPAR_XGPIO_3_BASEADDR
 
-/* AXI_GPIO_4 / AXI_GPIO_5 / AXI_GPIO_6 have interrupts (canonical XGPIO_5/6/7) */
-#define GPIO4_BASEADDR     XPAR_XGPIO_5_BASEADDR
-#define GPIO4_IRQ_ID       XPAR_FABRIC_XGPIO_5_INTR
+/* AXI_GPIO_2 / AXI_GPIO_3 */
+#define GPIO2_BASEADDR XPAR_XGPIO_4_BASEADDR
+#define GPIO3_BASEADDR XPAR_XGPIO_5_BASEADDR
 
-#define GPIO5_BASEADDR     XPAR_XGPIO_6_BASEADDR
-#define GPIO5_IRQ_ID       XPAR_FABRIC_XGPIO_6_INTR
+/* AXI_GPIO_4 / AXI_GPIO_5 / AXI_GPIO_6 with interrupts */
+#define GPIO4_BASEADDR XPAR_XGPIO_6_BASEADDR
+#define GPIO4_IRQ_ID   XPAR_FABRIC_XGPIO_6_INTR
 
-#define GPIO6_BASEADDR     XPAR_XGPIO_7_BASEADDR
-#define GPIO6_IRQ_ID       XPAR_FABRIC_XGPIO_7_INTR
+#define GPIO5_BASEADDR XPAR_XGPIO_7_BASEADDR
+#define GPIO5_IRQ_ID   XPAR_FABRIC_XGPIO_7_INTR
 
-/* AXI_GPIO_7 / AXI_GPIO_8 / AXI_GPIO_9 (canonical XGPIO_8/9/10) */
-#define GPIO7_BASEADDR     XPAR_XGPIO_8_BASEADDR
-#define GPIO8_BASEADDR     XPAR_XGPIO_9_BASEADDR
-#define GPIO9_BASEADDR     XPAR_XGPIO_10_BASEADDR
+#define GPIO6_BASEADDR XPAR_XGPIO_8_BASEADDR
+#define GPIO6_IRQ_ID   XPAR_FABRIC_XGPIO_8_INTR
 
-/* AXI_GPIO_IRQ_SPI (interrupt) -> canonical XGPIO_11 */
-#define GPIO_IRQ_SPI_BASEADDR  XPAR_XGPIO_11_BASEADDR
-#define GPIO_SPI_IRQ_ID        XPAR_FABRIC_XGPIO_11_INTR
+/* AXI_GPIO_7 / AXI_GPIO_8 / AXI_GPIO_9 */
+#define GPIO7_BASEADDR XPAR_XGPIO_9_BASEADDR
+#define GPIO8_BASEADDR XPAR_XGPIO_10_BASEADDR
+#define GPIO9_BASEADDR XPAR_XGPIO_11_BASEADDR
+
+/* AXI_GPIO_IRQ_SPI */
+#define GPIO_IRQ_SPI_BASEADDR XPAR_XGPIO_12_BASEADDR
+#define GPIO_SPI_IRQ_ID       XPAR_FABRIC_XGPIO_12_INTR
 
 #define GPIO_CHAN_1 1
 #define GPIO_CHAN_2 2
@@ -78,7 +81,7 @@ static XUartLite Uart;
 
 static XGpio     Gpio0, Gpio1, Gpio2, Gpio3;
 static XGpio     Gpio4, Gpio5, Gpio6;
-static XGpio     Gpio7, Gpio8, Gpio9;
+static XGpio     Gpio7, Gpio8, Gpio9, Gpio10;
 static XGpio     GpioIrqSpi;
 static XGpio     GpioPres;          /* NEW GPIO (0/1) with interrupt */
 
@@ -89,7 +92,7 @@ static volatile u8  rx_byte = 0;
 static volatile int g_capture_req = 0;
 
 /* PWM frame parser */
-#define FRAME_LEN 17
+#define FRAME_LEN 19
 static char frame_buf[FRAME_LEN];
 static int  frame_idx = 0;
 static enum { WAIT_START, RECV_FRAME } rx_state = WAIT_START;
@@ -297,9 +300,10 @@ static void Uart_RecvHandler(void *CallBackRef, unsigned int EventData)
             frame_buf[frame_idx++] = (char)c;
         }
     } else {
+    
         if (frame_idx < FRAME_LEN) {
             frame_buf[frame_idx++] = (char)c;
-
+            
             if (frame_idx == FRAME_LEN) {
                 if ((u8)frame_buf[FRAME_LEN - 1] == 'E') {
                     u16 v1 = ((u16)(u8)frame_buf[1] << 8) | (u16)(u8)frame_buf[2];
@@ -313,6 +317,9 @@ static void Uart_RecvHandler(void *CallBackRef, unsigned int EventData)
                     u8  v9 = (u8)frame_buf[13];
                     u8  v10 = (u8)frame_buf[14];
                     u8  v11 = (u8)frame_buf[15];
+                    u8  v12 = (u8)frame_buf[16];
+                    u8  v13 = (u8)frame_buf[17];
+                    xil_printf("v7 = %d\r\n", v7);
 
                     XGpio_DiscreteWrite(&Gpio0, GPIO_CHAN_1, v1);
                     XGpio_DiscreteWrite(&Gpio0, GPIO_CHAN_2, v2);
@@ -325,6 +332,8 @@ static void Uart_RecvHandler(void *CallBackRef, unsigned int EventData)
                     XGpio_DiscreteWrite(&Gpio8, GPIO_CHAN_1, v9);
                     XGpio_DiscreteWrite(&Gpio8, GPIO_CHAN_2, v10);
                     XGpio_DiscreteWrite(&Gpio9, GPIO_CHAN_1, v11);
+                    XGpio_DiscreteWrite(&Gpio10, GPIO_CHAN_1, v12);
+                    XGpio_DiscreteWrite(&Gpio10, GPIO_CHAN_2, v13);
                 }
                 rx_state  = WAIT_START;
                 frame_idx = 0;
@@ -473,7 +482,9 @@ int main(void)
     int s;
 
     xil_printf("\r\nFlashed successfully\r\n");
-    xil_printf("Welcome to CMODA7\r\n");
+    xil_printf("Welcome to CMODA7 35t\r\n");
+
+    
 
     /* GPIO init */
     if (InitGpio_ByBase(&Gpio0, GPIO0_BASEADDR) != XST_SUCCESS) return XST_FAILURE;
@@ -492,18 +503,20 @@ int main(void)
     if (InitGpio_ByBase(&Gpio8, GPIO8_BASEADDR) != XST_SUCCESS) return XST_FAILURE;
     if (InitGpio_ByBase(&Gpio9, GPIO9_BASEADDR) != XST_SUCCESS) return XST_FAILURE;
 
-    if (InitGpio_ByBase(&GpioIrqSpi, GPIO_IRQ_SPI_BASEADDR) != XST_SUCCESS) return XST_FAILURE;
+    if (InitGpio_ByBase(&Gpio10, GPIO10_BASEADDR) != XST_SUCCESS) return XST_FAILURE;
 
+    if (InitGpio_ByBase(&GpioIrqSpi, GPIO_IRQ_SPI_BASEADDR) != XST_SUCCESS) return XST_FAILURE;
+    
     /* Directions */
     XGpio_SetDataDirection(&Gpio0, GPIO_CHAN_1, 0x00000000);
     XGpio_SetDataDirection(&Gpio0, GPIO_CHAN_2, 0x00000000);
 
     XGpio_SetDataDirection(&Gpio1, GPIO_CHAN_1, 0x00000000);
     XGpio_SetDataDirection(&Gpio1, GPIO_CHAN_2, 0x00000000);
-
+    
     /* NEW presence input (single bit) */
     XGpio_SetDataDirection(&GpioPres, GPIO_CHAN_1, 0xFFFFFFFF);
-
+    
     XGpio_SetDataDirection(&Gpio2, GPIO_CHAN_1, 0xFFFFFFFF);
     XGpio_SetDataDirection(&Gpio2, GPIO_CHAN_2, 0x00000000);
 
@@ -518,6 +531,10 @@ int main(void)
 
     XGpio_SetDataDirection(&Gpio9, GPIO_CHAN_1, 0x00000000);
 
+    XGpio_SetDataDirection(&Gpio10, GPIO_CHAN_1, 0x00000000);
+    XGpio_SetDataDirection(&Gpio10, GPIO_CHAN_2, 0x00000000);
+
+    
     /* IRQ GPIOs as inputs */
     XGpio_SetDataDirection(&Gpio4, GPIO_CHAN_1, 0xFFFFFFFF);
     XGpio_SetDataDirection(&Gpio4, GPIO_CHAN_2, 0xFFFFFFFF);
@@ -529,7 +546,7 @@ int main(void)
     XGpio_SetDataDirection(&Gpio6, GPIO_CHAN_2, 0xFFFFFFFF);
 
     XGpio_SetDataDirection(&GpioIrqSpi, GPIO_CHAN_1, 0xFFFFFFFF);
-
+    
     /* Enable GPIO interrupts */
     XGpio_InterruptClear(&GpioIrqSpi, 0x1);
     XGpio_InterruptEnable(&GpioIrqSpi, 0x1);
@@ -551,6 +568,7 @@ int main(void)
     XGpio_InterruptClear(&GpioPres, 0x1);
     XGpio_InterruptEnable(&GpioPres, 0x1);
     XGpio_InterruptGlobalEnable(&GpioPres);
+    
 
     /* UART + INTC */
     s = InitUartLite_ByBase(&Uart, UART_BASEADDR);

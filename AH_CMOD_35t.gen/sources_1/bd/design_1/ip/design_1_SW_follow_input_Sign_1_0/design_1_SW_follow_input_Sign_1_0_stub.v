@@ -1,0 +1,28 @@
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+// --------------------------------------------------------------------------------
+// Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+// Date        : Wed Mar 18 15:17:36 2026
+// Host        : Yousef-Machine running 64-bit Ubuntu 24.04.4 LTS
+// Command     : write_verilog -force -mode synth_stub
+//               /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_SW_follow_input_Sign_1_0/design_1_SW_follow_input_Sign_1_0_stub.v
+// Design      : design_1_SW_follow_input_Sign_1_0
+// Purpose     : Stub declaration of top-level module interface
+// Device      : xc7a35tcpg236-1
+// --------------------------------------------------------------------------------
+
+// This empty module with port declaration file causes synthesis tools to infer a black box for IP.
+// The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
+// Please paste the declaration into a Verilog source file or add the file as an additional source.
+(* CHECK_LICENSE_TYPE = "design_1_SW_follow_input_Sign_1_0,SW_follow_input_Signal_Modes,{}" *) (* core_generation_info = "design_1_SW_follow_input_Sign_1_0,SW_follow_input_Signal_Modes,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SW_follow_input_Signal_Modes,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,Clock_Freq=12000000,COUNTER_WIDTH=16}" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* ip_definition_source = "module_ref" *) (* x_core_info = "SW_follow_input_Signal_Modes,Vivado 2025.1" *) 
+module design_1_SW_follow_input_Sign_1_0(clk, rst, in_sig, mode_sel, in_sig_sync, out_sig)
+/* synthesis syn_black_box black_box_pad_pin="rst,in_sig,mode_sel[1:0],in_sig_sync,out_sig" */
+/* synthesis syn_force_seq_prim="clk" */;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_mode = "slave clk" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk /* synthesis syn_isclock = 1 */;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 rst RST" *) (* x_interface_mode = "slave rst" *) (* x_interface_parameter = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input rst;
+  input in_sig;
+  input [1:0]mode_sel;
+  output in_sig_sync;
+  output out_sig;
+endmodule

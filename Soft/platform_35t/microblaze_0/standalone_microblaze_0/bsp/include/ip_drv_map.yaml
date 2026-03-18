@@ -13,6 +13,9 @@ axi_gpio_1:
 axi_gpio_10:
 - axi_gpio
 - gpio
+axi_gpio_11:
+- axi_gpio
+- gpio
 axi_gpio_2:
 - axi_gpio
 - gpio

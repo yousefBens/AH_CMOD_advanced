@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-6.17.0-14-generic")
+set(CMAKE_HOST_SYSTEM "Linux-6.17.0-19-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "6.17.0-14-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "6.17.0-19-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/home/yousef/Vivado_workspace/AH_CMOD_35t/Soft/platform_35t/microblaze_0/standalone_microblaze_0/bsp/microblaze_toolchain.cmake")

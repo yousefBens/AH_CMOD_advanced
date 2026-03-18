@@ -3,24 +3,24 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Feb  3 11:22:27 2026
-# Process ID         : 145141
+# Start of session at: Wed Mar 18 15:18:54 2026
+# Process ID         : 228970
 # Current directory  : /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/design_1_axi_gpio_5_0_synth_1
 # Command line       : vivado -log design_1_axi_gpio_5_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_gpio_5_0.tcl
 # Log file           : /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/design_1_axi_gpio_5_0_synth_1/design_1_axi_gpio_5_0.vds
 # Journal file       : /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/design_1_axi_gpio_5_0_synth_1/vivado.jou
 # Running On         : Yousef-Machine
 # Platform           : Ubuntu
-# Operating System   : Ubuntu 24.04.3 LTS
+# Operating System   : Ubuntu 24.04.4 LTS
 # Processor Detail   : Intel(R) Core(TM) Ultra 7 155H
-# CPU Frequency      : 2500.000 MHz
+# CPU Frequency      : 4032.800 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 22
-# Host memory        : 33082 MB
+# Host memory        : 33080 MB
 # Swap memory        : 8589 MB
-# Total Virtual      : 41672 MB
-# Available Virtual  : 23690 MB
+# Total Virtual      : 41670 MB
+# Available Virtual  : 18742 MB
 #-----------------------------------------------------------
 source design_1_axi_gpio_5_0.tcl -notrace
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axi_gpio_5_0, cache-ID = 89a2c2fb174f93f6.
-INFO: [Common 17-206] Exiting Vivado at Tue Feb  3 11:22:34 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 15:18:58 2026...
