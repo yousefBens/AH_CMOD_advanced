@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Wed Mar 18 15:17:40 2026
+// Date        : Mon May  4 17:58:47 2026
 // Host        : Yousef-Machine running 64-bit Ubuntu 24.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_SW_follow_input_Sign_0_0/design_1_SW_follow_input_Sign_0_0_sim_netlist.v
@@ -103,7 +103,7 @@ module design_1_SW_follow_input_Sign_0_0_SW_follow_input_Signal_Modes
         .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
-    .INIT(16'h00AC)) 
+    .INIT(16'h00B2)) 
     out_sig_i_1
        (.I0(in_sig_sync),
         .I1(mode_sel[0]),

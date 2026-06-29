@@ -11,8 +11,8 @@
 *.ip_user_files/
 *.hw/
 
-# ⚠️ NE PAS ignorer .gen complètement (important pour BD)
-# *.gen/   <-- ❌ à enlever
+# NE PAS ignorer .gen complètement (important pour BD)
+# *.gen/ 
 
 # OS
 *~

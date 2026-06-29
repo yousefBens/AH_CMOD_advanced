@@ -5,29 +5,29 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity EM_REC_Delay_Duty is
   generic (
-    Clock_Freq : positive := 12_000_000;  -- Horloge système (Hz), info facultative ici
-    COUNTER_WIDTH : positive := 16  -- nombre de bits pour les compteurss
+    Clock_Freq : positive := 12_000_000;  
+    COUNTER_WIDTH : positive := 16  
   );
   port (
-    clk           : in  std_logic;  -- horloge FPGA
-    rst           : in  std_logic;  -- reset synchro actif à '1'
+    clk           : in  std_logic;  
+    rst           : in  std_logic;  
 
-    EM_REC     : in  std_logic;  -- signal EM_REC "brut" venant de l'extérieur
+    EM_REC     : in  std_logic;  
 
-    -- paramètres en N coups d'horloge
-    delay_cycles  : in  unsigned(COUNTER_WIDTH-1 downto 0); -- retard avant sortie=1
-    pulse_cycles  : in  unsigned(COUNTER_WIDTH-1 downto 0); -- durée pendant laquelle sortie=1
 
-    EM_REC_sync   : out std_logic;  -- EM_REC synchronisé sur clk (optionnel)
-    out_sig       : out std_logic   -- signal de sortie retardé et élargi
+    delay_cycles  : in  unsigned(COUNTER_WIDTH-1 downto 0); 
+    pulse_cycles  : in  unsigned(COUNTER_WIDTH-1 downto 0);
+
+    EM_REC_sync   : out std_logic; 
+    out_sig       : out std_logic   
   );
 end EM_REC_Delay_Duty;
 
 architecture rtl of EM_REC_Delay_Duty is
-  -- synchronisation 2 flip-flops
+
   signal em_sync1, em_sync2 : std_logic := '0';
 
-  -- pulse de 1 cycle sur front montant synchro
+
   signal em_rising : std_logic := '0';
 
   signal delay_cnt  : unsigned(COUNTER_WIDTH-1 downto 0) := (others => '0');
@@ -36,9 +36,7 @@ architecture rtl of EM_REC_Delay_Duty is
   signal pulse_active       : std_logic := '0';
 begin
 
-  ---------------------------------------------------------------------------
-  -- 1) Synchronisation de EM_REC sur clk
-  ---------------------------------------------------------------------------
+
   process(clk)
   begin
     if rising_edge(clk) then
@@ -54,12 +52,10 @@ begin
 
   EM_REC_sync <= em_sync2;
 
-  -- Détection de front montant (synchrone)
+
   em_rising <= '1' when (em_sync1 = '1' and em_sync2 = '0') else '0';
 
-  ---------------------------------------------------------------------------
-  -- 2) Retard + largeur en nombre de cycles
-  ---------------------------------------------------------------------------
+
   process(clk)
   begin
     if rising_edge(clk) then
@@ -72,36 +68,36 @@ begin
 
       else
 
-        -- 1) Nouveau front montant de EM_REC_sync ?
+
         if (em_rising = '1') and (delay_active = '0') and (pulse_active = '0') then
 
           if delay_cycles = 0 then
-            -- pas de retard : on démarre directement le pulse
+
             pulse_active <= '1';
             pulse_cnt    <= (others => '0');
-            out_sig      <= '1';  -- 1er cycle du pulse dès maintenant
+            out_sig      <= '1';  
           else
-            -- retard demandé : on commence la phase de delay
+ 
             delay_active <= '1';
             delay_cnt    <= (others => '0');
             out_sig      <= '0';
           end if;
 
-        -- 2) Phase de retard
+
         elsif delay_active = '1' then
 
           if delay_cnt = delay_cycles - 1 then
-            -- retard terminé -> on lance le pulse
+
             delay_active <= '0';
             pulse_active <= '1';
             pulse_cnt    <= (others => '0');
-            out_sig      <= '1';  -- 1er cycle du pulse
+            out_sig      <= '1';  
           else
             delay_cnt <= delay_cnt + 1;
             out_sig   <= '0';
           end if;
 
-        -- 3) Phase de pulse (sortie à 1 pendant pulse_cycles cycles)
+
         elsif pulse_active = '1' then
 
           if pulse_cnt = pulse_cycles - 1 then
@@ -112,7 +108,7 @@ begin
             out_sig   <= '1';
           end if;
 
-        -- 4) Rien en cours
+
         else
           out_sig <= '0';
         end if;

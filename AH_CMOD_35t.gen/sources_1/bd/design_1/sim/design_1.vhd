@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Wed Mar 18 15:57:18 2026
+--Date        : Mon May  4 17:58:18 2026
 --Host        : Yousef-Machine running 64-bit Ubuntu 24.04.4 LTS
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -6067,7 +6067,6 @@ architecture STRUCTURE of design_1 is
   end component design_1_SW_follow_input_Sign_1_0;
   signal SPI_slave_0_rx : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal SPI_slave_0_rx_done : STD_LOGIC;
-  signal \^tx_rx_switch\ : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -6561,7 +6560,6 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 RST.RST RST";
   attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
 begin
-  Tx_Rx_switch <= \^tx_rx_switch\;
   led2 <= \^led2\;
 Btn_led_0: component design_1_Btn_led_0_0
      port map (
@@ -6583,7 +6581,7 @@ EM_REC_Delay_Duty_Mo_0: component design_1_EM_REC_Delay_Duty_Mo_0_0
       clk => clk_wiz_0_clk_out1,
       delay_cycles(15 downto 0) => axi_gpio_0_gpio2_io_o(15 downto 0),
       mode_sel(1 downto 0) => axi_gpio_8_gpio_io_o(1 downto 0),
-      out_sig => \^tx_rx_switch\,
+      out_sig => Tx_Rx_switch,
       pulse_cycles(15 downto 0) => axi_gpio_0_gpio_io_o(15 downto 0),
       rst => rst_Clk_100M_peripheral_reset(0)
     );
@@ -6628,7 +6626,7 @@ SPI_slave_0: component design_1_SPI_slave_0_0
 SW_follow_input_Sign_0: component design_1_SW_follow_input_Sign_0_0
      port map (
       clk => clk_wiz_0_clk_out1,
-      in_sig => \^tx_rx_switch\,
+      in_sig => receive_signal_0_Signal_out,
       in_sig_sync => NLW_SW_follow_input_Sign_0_in_sig_sync_UNCONNECTED,
       mode_sel(1 downto 0) => axi_gpio_11_gpio_io_o(1 downto 0),
       out_sig => sw1,
@@ -6637,7 +6635,7 @@ SW_follow_input_Sign_0: component design_1_SW_follow_input_Sign_0_0
 SW_follow_input_Sign_1: component design_1_SW_follow_input_Sign_1_0
      port map (
       clk => clk_wiz_0_clk_out1,
-      in_sig => \^tx_rx_switch\,
+      in_sig => receive_signal_0_Signal_out,
       in_sig_sync => NLW_SW_follow_input_Sign_1_in_sig_sync_UNCONNECTED,
       mode_sel(1 downto 0) => axi_gpio_11_gpio2_io_o(1 downto 0),
       out_sig => sw3,

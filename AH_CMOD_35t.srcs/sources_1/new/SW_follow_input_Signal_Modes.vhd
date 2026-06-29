@@ -10,12 +10,12 @@ entity SW_follow_input_Signal_Modes is
   );
   port (
     clk           : in  std_logic;
-    rst           : in  std_logic;  -- reset synchro actif à '1'
+    rst           : in  std_logic;  
 
     in_sig        : in  std_logic;
 
 
-    -- 00: normal (delay+pulse) ; 01: force 0 ; 10: force 1 ; 11
+
     mode_sel      : in  unsigned(1 downto 0);
 
     in_sig_sync   : out std_logic;
@@ -33,9 +33,7 @@ architecture rtl of SW_follow_input_Signal_Modes is
   signal pulse_active : std_logic := '0';
 begin
 
-  ---------------------------------------------------------------------------
-  -- 1) Synchronisation de EM_REC sur clk
-  ---------------------------------------------------------------------------
+
   process(clk)
   begin
     if rising_edge(clk) then
@@ -51,12 +49,10 @@ begin
 
   in_sig_sync <= em_sync2;
 
-  -- Détection de front montant (synchrone)
+
   em_rising <= '1' when (em_sync1 = '1' and em_sync2 = '0') else '0';
 
-  ---------------------------------------------------------------------------
-  -- 2) Retard + largeur OU forçage 0/1 selon mode_sel
-  ---------------------------------------------------------------------------
+
   process(clk)
   begin
     if rising_edge(clk) then
@@ -68,10 +64,8 @@ begin
         out_sig      <= '0';
 
       else
-        -- =========================
-        -- FORCAGE selon mode_sel
-        -- =========================
-        if mode_sel = "00" then
+
+        if mode_sel = "01" then
           -- Force 0
           out_sig      <= '0';
           delay_cnt    <= (others => '0');
@@ -79,7 +73,7 @@ begin
           delay_active <= '0';
           pulse_active <= '0';
 
-        elsif mode_sel = "01" then
+        elsif mode_sel = "10" then
           -- Force 1
           out_sig      <= '1';
           delay_cnt    <= (others => '0');

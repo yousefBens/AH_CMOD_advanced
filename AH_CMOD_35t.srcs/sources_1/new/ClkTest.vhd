@@ -7,9 +7,9 @@ entity ClkTest is
     DIVIDER : natural := 50_000  -- N : f_out = f_clk / (2*N)
   );
   port (
-    clk     : in  std_logic;  -- ton clk 100 MHz
-    rst     : in  std_logic;  -- reset synchrone, actif à '1'
-    clk_out : out std_logic   -- signal de test vers pin / LED
+    clk     : in  std_logic;  
+    rst     : in  std_logic;  
+    clk_out : out std_logic   
   );
 end ClkTest;
 
@@ -27,7 +27,7 @@ begin
       else
         if cnt = DIVIDER-1 then
           cnt     <= (others => '0');
-          clk_reg <= not clk_reg;  -- toggle => divise par 2
+          clk_reg <= not clk_reg;  
         else
           cnt <= cnt + 1;
         end if;

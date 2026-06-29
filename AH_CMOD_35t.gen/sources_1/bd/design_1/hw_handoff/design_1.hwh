@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 18 15:57:19 2026" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May  4 17:58:20 2026" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:cmod_a7-35t:part0:1.2" DEVICE="7a35t" NAME="design_1" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -241,8 +241,6 @@
         <PORT DIR="O" NAME="out_sig" SIGIS="undef" SIGNAME="EM_REC_Delay_Duty_Mo_0_out_sig">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Tx_Rx_switch"/>
-            <CONNECTION INSTANCE="SW_follow_input_Sign_0" PORT="in_sig"/>
-            <CONNECTION INSTANCE="SW_follow_input_Sign_1" PORT="in_sig"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="15" NAME="pulse_cycles" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
@@ -353,7 +351,6 @@
     <MODULE COREREVISION="1" FULLNAME="/SPI_slave_0" HWVERSION="1.0" INSTANCE="SPI_slave_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SPI_slave" VLNV="xilinx.com:module_ref:SPI_slave:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Clock_Freq" VALUE="12000000"/>
         <PARAMETER NAME="data_length" VALUE="16"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_SPI_slave_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -437,9 +434,9 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in_sig" SIGIS="undef" SIGNAME="EM_REC_Delay_Duty_Mo_0_out_sig">
+        <PORT DIR="I" NAME="in_sig" SIGIS="undef" SIGNAME="receive_signal_0_Signal_sync">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_0" PORT="out_sig"/>
+            <CONNECTION INSTANCE="receive_signal_0" PORT="Signal_sync"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="in_sig_sync" SIGIS="undef"/>
@@ -475,9 +472,9 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in_sig" SIGIS="undef" SIGNAME="EM_REC_Delay_Duty_Mo_0_out_sig">
+        <PORT DIR="I" NAME="in_sig" SIGIS="undef" SIGNAME="receive_signal_0_Signal_sync">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_0" PORT="out_sig"/>
+            <CONNECTION INSTANCE="receive_signal_0" PORT="Signal_sync"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="in_sig_sync" SIGIS="undef"/>
@@ -9392,7 +9389,6 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="rst_Clk_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="ClkTest_0" PORT="clk"/>
-            <CONNECTION INSTANCE="SPI_slave_0" PORT="Clk"/>
             <CONNECTION INSTANCE="axi_gpio_3" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M06_ACLK"/>
             <CONNECTION INSTANCE="axi_gpio_4" PORT="s_axi_aclk"/>
@@ -9424,10 +9420,11 @@
             <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_0" PORT="clk"/>
             <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_1" PORT="clk"/>
             <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_2" PORT="clk"/>
-            <CONNECTION INSTANCE="SW_follow_input_Sign_0" PORT="clk"/>
-            <CONNECTION INSTANCE="SW_follow_input_Sign_1" PORT="clk"/>
             <CONNECTION INSTANCE="axi_gpio_11" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph" PORT="M17_ACLK"/>
+            <CONNECTION INSTANCE="SPI_slave_0" PORT="Clk"/>
+            <CONNECTION INSTANCE="SW_follow_input_Sign_0" PORT="clk"/>
+            <CONNECTION INSTANCE="SW_follow_input_Sign_1" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
@@ -15499,6 +15496,8 @@
             <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_0" PORT="EM_REC"/>
             <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_1" PORT="EM_REC"/>
             <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_2" PORT="EM_REC"/>
+            <CONNECTION INSTANCE="SW_follow_input_Sign_0" PORT="in_sig"/>
+            <CONNECTION INSTANCE="SW_follow_input_Sign_1" PORT="in_sig"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="rst_Clk_100M_peripheral_reset">
@@ -15607,12 +15606,12 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst" SIGNAME="rst_Clk_100M_peripheral_reset">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ClkTest_0" PORT="rst"/>
-            <CONNECTION INSTANCE="SPI_slave_0" PORT="rst"/>
             <CONNECTION INSTANCE="Btn_led_0" PORT="rst"/>
             <CONNECTION INSTANCE="receive_signal_0" PORT="rst"/>
             <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_0" PORT="rst"/>
             <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_1" PORT="rst"/>
             <CONNECTION INSTANCE="EM_REC_Delay_Duty_Mo_2" PORT="rst"/>
+            <CONNECTION INSTANCE="SPI_slave_0" PORT="rst"/>
             <CONNECTION INSTANCE="SW_follow_input_Sign_0" PORT="rst"/>
             <CONNECTION INSTANCE="SW_follow_input_Sign_1" PORT="rst"/>
           </CONNECTIONS>

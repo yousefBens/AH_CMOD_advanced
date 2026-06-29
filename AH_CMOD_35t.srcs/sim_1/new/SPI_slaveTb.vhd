@@ -7,48 +7,40 @@ end SPI_slaveTb;
 
 architecture DUT of SPI_slaveTb is
 
-  ------------------------------------------------------------------------
-  -- CONSTANTES DE SIMULATION
-  ------------------------------------------------------------------------
-  constant ClockFreq      : integer := 12_000_000;             -- 12 MHz
-  constant ClockPeriod    : time    := 1 sec / ClockFreq;      -- ~83 ns
+  constant ClockFreq      : integer := 12_000_000;            
+  constant ClockPeriod    : time    := 1 sec / ClockFreq;      
 
-  constant SpiClockFreq   : integer := 1_000_000;              -- 1 MHz
-  constant SpiClockPeriod : time    := 1 sec / SpiClockFreq;   -- 1 µs
+  constant SpiClockFreq   : integer := 1_000_000;              
+  constant SpiClockPeriod : time    := 1 sec / SpiClockFreq;  
 
   constant DATA_LEN       : integer := 16;
 
-  ------------------------------------------------------------------------
-  -- SIGNaux
-  ------------------------------------------------------------------------
-  -- Horloge / reset système
+
   signal Clk       : std_logic := '0';
   signal rst       : std_logic := '1';
 
-  -- Config SPI (mode 0)
+
   signal cpol      : std_logic := '0';
   signal cpha      : std_logic := '0';
 
-  -- Lignes SPI
+
   signal sclk      : std_logic := '0';
   signal ss_n      : std_logic := '1';
   signal mosi      : std_logic := '0';
   signal miso      : std_logic;
 
-  -- Interface registres
+
   signal rx_enable : std_logic := '1';
   signal tx        : std_logic_vector(DATA_LEN-1 downto 0) := (others => '0');
   signal rx        : std_logic_vector(DATA_LEN-1 downto 0);
 
-  -- Status
+
   signal busy      : std_logic;
   signal rx_done   : std_logic;
 
 begin
 
-  ------------------------------------------------------------------------
-  -- UUT : instanciation du SPI_slave
-  ------------------------------------------------------------------------
+
   U_SPI : entity work.SPI_slave(rtl)
     generic map (
       Clock_Freq  => ClockFreq,
@@ -70,30 +62,26 @@ begin
       rx_done   => rx_done
     );
 
-  ------------------------------------------------------------------------
-  -- HORLOGE SYSTÈME 12 MHz (comme EM_RECTb)
-  ------------------------------------------------------------------------
+
   Clk <= not Clk after ClockPeriod/2;
 
-  ------------------------------------------------------------------------
-  -- PROCESSUS DE STIMULATION
-  ------------------------------------------------------------------------
+
   STIM : process
 
-    -- Procédure pour envoyer un mot 16 bits MSB-first sur MOSI
+
     procedure spi_send_word (
       constant w : in std_logic_vector(DATA_LEN-1 downto 0)) is
     begin
       for i in DATA_LEN-1 downto 0 loop
-        -- préparer le bit sur MOSI
+
         mosi <= w(i);
         wait for SpiClockPeriod/2;
 
-        -- front montant de SCLK (le slave échantillonne)
+
         sclk <= '1';
         wait for SpiClockPeriod/2;
 
-        -- front descendant -> prochain bit
+
         sclk <= '0';
       end loop;
     end procedure;

@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Wed Mar 18 15:17:43 2026
+-- Date        : Mon Mar 30 11:24:04 2026
 -- Host        : Yousef-Machine running 64-bit Ubuntu 24.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.gen/sources_1/bd/design_1/ip/design_1_SPI_slave_0_0/design_1_SPI_slave_0_0_stub.vhdl
@@ -33,7 +33,7 @@ entity design_1_SPI_slave_0_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of design_1_SPI_slave_0_0 : entity is "design_1_SPI_slave_0_0,SPI_slave,{}";
   attribute core_generation_info : string;
-  attribute core_generation_info of design_1_SPI_slave_0_0 : entity is "design_1_SPI_slave_0_0,SPI_slave,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SPI_slave,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,Clock_Freq=12000000,data_length=16}";
+  attribute core_generation_info of design_1_SPI_slave_0_0 : entity is "design_1_SPI_slave_0_0,SPI_slave,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SPI_slave,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,data_length=16}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_SPI_slave_0_0 : entity is "yes";
   attribute ip_definition_source : string;

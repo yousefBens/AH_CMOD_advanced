@@ -24,8 +24,8 @@
 				"partialBitstream": false,
 				"skipRevisionCheck": false,
 				"device": {
-					"plDevice": "Auto Detect",
-					"psDevice": "Auto Detect"
+					"plDevice": "Digilent Cmod A7 - 35T 210328BDE003A/4-xc7a35t",
+					"psDevice": "Digilent Cmod A7 - 35T 210328BDE003A/undefined-undefined"
 				},
 				"bitstreamFile": "/home/yousef/Vivado_workspace/AH_CMOD_35t/AH_CMOD_35t.runs/impl_1/design_1_wrapper.bit",
 				"downloadElf": [

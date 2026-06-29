@@ -9,7 +9,7 @@ entity EMREC_Signal is
   port (
     Clk        : in  std_logic;
     rst        : in  std_logic;
-    freq_val   : in  unsigned(7 downto 0); -- fréquence MREEC en Hz (1..255)
+    freq_val   : in  unsigned(7 downto 0); 
     MREEC_out  : out std_logic
   );
 end EMREC_Signal;
@@ -19,10 +19,10 @@ architecture rtl of EMREC_Signal is
   signal toggle_limit  : unsigned(31 downto 0) := (others => '0');
   signal MREEC_reg     : std_logic := '0';
 
-  signal freq_val_int  : unsigned(7 downto 0) := to_unsigned(1, 8); -- défaut = 1 Hz
+  signal freq_val_int  : unsigned(7 downto 0) := to_unsigned(1, 8);
 begin
 
-  -- 1) Latch de freq_val avec une valeur par défaut
+
   process(Clk)
   begin
     if rising_edge(Clk) then
@@ -38,7 +38,7 @@ begin
     end if;
   end process;
 
-  -- 2) Génération de MREEC_out
+
   process(Clk)
     variable freq_int : integer;
     variable tl       : integer;
@@ -55,7 +55,7 @@ begin
           freq_int := 1;
         end if;
 
-        -- nombre de cycles entre deux toggles
+       
         tl := Clock_Freq / (2 * freq_int);
         toggle_limit <= to_unsigned(tl, 32);
 

@@ -13,7 +13,7 @@ architecture DUT of EMREC_SignalTb is
 
   signal Clk        : std_logic := '0';
   signal rst        : std_logic := '1';
-  signal freq_val   : unsigned(7 downto 0); --:= to_unsigned(10, 32); -- fréquence MREEC en Hz
+  signal freq_val   : unsigned(7 downto 0); 
   
   signal MREEC_out  : std_logic;
 begin
@@ -30,9 +30,7 @@ begin
   );
   
   Clk <= not Clk after ClockPeriod / 2;
-  ------------------------------------------------------------------------
-  -- PROCESS DE TEST
-  ------------------------------------------------------------------------
+
   process
   begin
     -- Phase de reset
@@ -43,7 +41,7 @@ begin
     wait for 200 ms;
     freq_val <= to_unsigned(1000, 8) ;    
     
-    wait; -- fin de simulation
+    wait; 
   end process;
 
 end DUT;

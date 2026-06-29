@@ -5,11 +5,11 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity debug_signal is
   generic (
-    Clock_Freq : positive := 12_000_000  -- Horloge système (Hz), info facultative ici
+    Clock_Freq : positive := 12_000_000 
   );
   port (
-    Clk           : in  std_logic;                      -- Horloge principale FPGA
-    rst           : in  std_logic;                      -- Reset actif '1'
+    Clk           : in  std_logic;                     
+    rst           : in  std_logic;                   
     sig       : out std_logic
   );
 end debug_signal;

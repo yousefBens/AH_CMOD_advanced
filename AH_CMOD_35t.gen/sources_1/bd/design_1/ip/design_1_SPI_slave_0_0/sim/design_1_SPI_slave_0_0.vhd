@@ -76,7 +76,6 @@ ARCHITECTURE design_1_SPI_slave_0_0_arch OF design_1_SPI_slave_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_SPI_slave_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT SPI_slave IS
     GENERIC (
-      Clock_Freq : INTEGER;
       data_length : INTEGER
     );
     PORT (
@@ -107,7 +106,6 @@ ARCHITECTURE design_1_SPI_slave_0_0_arch OF design_1_SPI_slave_0_0 IS
 BEGIN
   U0 : SPI_slave
     GENERIC MAP (
-      Clock_Freq => 12000000,
       data_length => 16
     )
     PORT MAP (

@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity axis_tlast is
   generic (
-    N_SAMPLES : positive := 2048   -- nombre d'échantillons par "frame"
+    N_SAMPLES : positive := 2048  
   );
   port (
     -- AXI-Stream slave (from XADC)
@@ -30,12 +30,12 @@ architecture rtl of axis_tlast is
   signal last_i   : std_logic := '0';
 begin
 
-  -- Pass-through handshake + data
+
   m_tdata  <= s_tdata;
   m_tvalid <= s_tvalid;
   s_tready <= m_tready;
 
-  -- un transfert a lieu uniquement quand valid && ready
+
   xfer <= s_tvalid and m_tready;
 
   process(aclk)

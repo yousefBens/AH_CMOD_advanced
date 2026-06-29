@@ -14,7 +14,7 @@
 #include "xil_cache.h"
 
 /* ============================================================
- * Addresses / IRQ  (aligned with your NEW xparameters.h)
+ * Addresses / IRQ  
  * ============================================================ */
 #define INTC_BASEADDR      XPAR_XINTC_0_BASEADDR
 #define UART_BASEADDR      XPAR_XUARTLITE_0_BASEADDR
@@ -83,7 +83,7 @@ static XGpio     Gpio0, Gpio1, Gpio2, Gpio3;
 static XGpio     Gpio4, Gpio5, Gpio6;
 static XGpio     Gpio7, Gpio8, Gpio9, Gpio10;
 static XGpio     GpioIrqSpi;
-static XGpio     GpioPres;          /* NEW GPIO (0/1) with interrupt */
+static XGpio     GpioPres;          
 
 static XAxiDma   AxiDma;
 
@@ -128,6 +128,8 @@ typedef struct {
 
 static void ComputeStatsFromBram(const u32 *bram_words, u32 nwords, StatsMv *out);
 static inline u32 CodeToMv(u16 raw16);
+
+static volatile u16 last_data = 0xFFFF;
 
 /* ============================================================
  * DMA init (Simple mode, S2MM)
@@ -258,7 +260,7 @@ static int SetupInterrupts_ByBase(XIntc *Inst, u32 BaseAddr)
     s = XIntc_Connect(Inst, GPIO6_IRQ_ID, (XInterruptHandler)Gpio6_Handler, (void *)&Gpio6);
     if (s != XST_SUCCESS) return s;
 
-    /* NEW Presence GPIO interrupt */
+    /* GPIO interrupt */
     s = XIntc_Connect(Inst, GPIO_PRES_IRQ_ID, (XInterruptHandler)GpioPres_Handler, (void *)&GpioPres);
     if (s != XST_SUCCESS) return s;
 
@@ -361,11 +363,22 @@ static void Uart_SendHandler(void *CallBackRef, unsigned int EventData)
 static void GpioIrqSpi_Handler(void *CallbackRef)
 {
     XGpio *GpioPtr = (XGpio *)CallbackRef;
-    u32 status = XGpio_InterruptGetStatus(GpioPtr);
+    u32 status;
+
+    status = XGpio_InterruptGetStatus(GpioPtr);
 
     if (status & 0x1) {
+        /* clear interrupt */
         XGpio_InterruptClear(GpioPtr, 0x1);
-        (void)(XGpio_DiscreteRead(GpioPtr, GPIO_CHAN_1) & 0xFFFF);
+
+        /* lire la donnée présente sur gpio2 channel 1 */
+        u16 data = XGpio_DiscreteRead(&Gpio2, GPIO_CHAN_1);
+
+        xil_printf("SPI RX gpio2_ch1 = 0x%08X\r\n", data);
+
+        last_data = data;
+    } else {
+        XGpio_InterruptClear(GpioPtr, status);
     }
 }
 
@@ -417,10 +430,7 @@ static void Gpio6_Handler(void *CallbackRef)
     }
 }
 
-/* NEW: GPIO presence interrupt handler
- * On any change (0->1 or 1->0): send the new level to the IHM via UART.
- * Format example: "PRES:1\r\n" or "PRES:0\r\n"
- */
+
 static void GpioPres_Handler(void *CallbackRef)
 {
     XGpio *GpioPtr = (XGpio *)CallbackRef;
@@ -441,7 +451,7 @@ static void GpioPres_Handler(void *CallbackRef)
 }
 
 /* ============================================================
- * ADC convert / stats (unchanged)
+ * ADC convert / stats 
  * ============================================================ */
 static inline u32 CodeToMv(u16 raw16)
 {
@@ -514,7 +524,7 @@ int main(void)
     XGpio_SetDataDirection(&Gpio1, GPIO_CHAN_1, 0x00000000);
     XGpio_SetDataDirection(&Gpio1, GPIO_CHAN_2, 0x00000000);
     
-    /* NEW presence input (single bit) */
+    /* Presence input (single bit) */
     XGpio_SetDataDirection(&GpioPres, GPIO_CHAN_1, 0xFFFFFFFF);
     
     XGpio_SetDataDirection(&Gpio2, GPIO_CHAN_1, 0xFFFFFFFF);
@@ -564,7 +574,7 @@ int main(void)
     XGpio_InterruptEnable(&Gpio6, 0x3);
     XGpio_InterruptGlobalEnable(&Gpio6);
 
-    /* NEW presence interrupt enable (bit0) */
+    /* Presence interrupt enable (bit0) */
     XGpio_InterruptClear(&GpioPres, 0x1);
     XGpio_InterruptEnable(&GpioPres, 0x1);
     XGpio_InterruptGlobalEnable(&GpioPres);

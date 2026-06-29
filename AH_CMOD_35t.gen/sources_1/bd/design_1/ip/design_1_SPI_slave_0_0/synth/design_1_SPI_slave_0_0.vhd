@@ -76,7 +76,6 @@ ARCHITECTURE design_1_SPI_slave_0_0_arch OF design_1_SPI_slave_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_SPI_slave_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT SPI_slave IS
     GENERIC (
-      Clock_Freq : INTEGER;
       data_length : INTEGER
     );
     PORT (
@@ -100,7 +99,7 @@ ARCHITECTURE design_1_SPI_slave_0_0_arch OF design_1_SPI_slave_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_SPI_slave_0_0_arch : ARCHITECTURE IS "design_1_SPI_slave_0_0,SPI_slave,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_SPI_slave_0_0_arch: ARCHITECTURE IS "design_1_SPI_slave_0_0,SPI_slave,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SPI_slave,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,Clock_Freq=12000000,data_length=16}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_SPI_slave_0_0_arch: ARCHITECTURE IS "design_1_SPI_slave_0_0,SPI_slave,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SPI_slave,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,data_length=16}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_SPI_slave_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -115,7 +114,6 @@ ARCHITECTURE design_1_SPI_slave_0_0_arch OF design_1_SPI_slave_0_0 IS
 BEGIN
   U0 : SPI_slave
     GENERIC MAP (
-      Clock_Freq => 12000000,
       data_length => 16
     )
     PORT MAP (

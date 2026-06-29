@@ -11,14 +11,14 @@ entity EM_REC_Delay_Duty_Mode_QPF is
   );
   port (
     clk           : in  std_logic;
-    rst           : in  std_logic;  -- reset synchro actif à '1'
+    rst           : in  std_logic; 
 
     EM_REC        : in  std_logic;
 
     delay_cycles  : in  unsigned(COUNTER_WIDTH-1 downto 0);
     pulse_cycles  : in  unsigned(COUNTER_WIDTH-1 downto 0);
 
-    -- 00: normal (delay+pulse) ; 01: force 0 ; 10: force 1 ; 11
+
     mode_sel      : in  unsigned(1 downto 0);
 
     EM_REC_sync   : out std_logic;
@@ -37,9 +37,7 @@ architecture rtl of EM_REC_Delay_Duty_Mode_QPF is
   signal pulse_active : std_logic := '0';
 begin
 
-  ---------------------------------------------------------------------------
-  -- 1) Synchronisation de EM_REC sur clk
-  ---------------------------------------------------------------------------
+
   process(clk)
   begin
     if rising_edge(clk) then
@@ -55,12 +53,10 @@ begin
 
   EM_REC_sync <= em_sync2;
 
-  -- Détection de front montant (synchrone)
+
   em_rising <= '1' when (em_sync1 = '1' and em_sync2 = '0') else '0';
 
-  ---------------------------------------------------------------------------
-  -- 2) Retard + largeur OU forçage 0/1 selon mode_sel
-  ---------------------------------------------------------------------------
+
   process(clk)
   begin
     if rising_edge(clk) then
@@ -72,9 +68,7 @@ begin
         out_sig      <= '0';
 
       else
-        -- =========================
-        -- FORCAGE selon mode_sel
-        -- =========================
+
         if mode_sel = "01" then
           -- Force 0
           out_sig      <= '0';
@@ -100,12 +94,7 @@ begin
           pulse_active <= '0';
 
         else
-          -- =========================
-          -- MODE NORMAL : delay + pulse
-          -- =========================
 
-          -- Protection si pulse_cycles=0 : on ne génère rien
-          -- (sinon pulse_cycles - 1 underflow)
           if pulse_cycles = 0 then
             out_sig      <= '1';
             delay_cnt    <= (others => '0');
@@ -114,7 +103,7 @@ begin
             pulse_active <= '0';
 
           else
-            -- 1) Nouveau front montant
+
             if (em_rising = '1') and (delay_active = '0') and (pulse_active = '0') then
 
               if delay_cycles = 0 then
@@ -127,11 +116,10 @@ begin
                 out_sig      <= '1';
               end if;
 
-            -- 2) Phase de retard
             elsif delay_active = '1' then
 
               if delay_cycles = 0 then
-                -- sécurité, même si normalement on n'arrive pas ici
+
                 delay_active <= '0';
                 pulse_active <= '1';
                 pulse_cnt    <= (others => '0');
@@ -147,7 +135,7 @@ begin
                 out_sig   <= '1';
               end if;
 
-            -- 3) Phase de pulse
+
             elsif pulse_active = '1' then
 
               if pulse_cnt = pulse_cycles - 1 then
